@@ -94,7 +94,7 @@ export function DynamicInput() {
           ref={inputReference}
           contentEditable
           onKeyDown={handleKeyDown}
-          className="border-input border-primary bg-background focus-visible:ring-ring min-h-[100px] overflow-y-auto overflow-x-hidden whitespace-pre-wrap break-words rounded-md border p-2 text-neutral-50 focus-visible:outline-none focus-visible:ring-2"
+          className="border-input focus-visible:ring-ring border-primary bg-background min-h-[100px] overflow-y-auto overflow-x-hidden whitespace-pre-wrap break-words rounded-md border p-2 text-neutral-50 focus-visible:outline-none focus-visible:ring-2"
           style={{ width: '500px', maxWidth: '100%' }}
           aria-label="Dynamic input field"
           role="textbox"
