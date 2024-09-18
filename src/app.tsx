@@ -1,3 +1,11 @@
+'use client'
+
+import { DynamicInput } from '@app/components/dynamic-input'
+
 export function App() {
-  return <p>Hello world</p>
+  return (
+    <main className="bg-background min-h-screen">
+      <DynamicInput />
+    </main>
+  )
 }
