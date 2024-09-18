@@ -53,7 +53,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:vitest/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
@@ -64,15 +63,6 @@ module.exports = {
     'eslint:recommended',
   ],
   overrides: [
-    {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react', 'plugin:vitest/recommended'],
-      rules: {
-        'sonarjs/no-duplicate-string': 'off',
-        '@typescript-eslint/unbound-method': 'off',
-        '@typescript-eslint/no-unsafe-member-access': 'off',
-      },
-    },
     {
       files: ['tailwind.config.ts'],
       rules: {
@@ -85,12 +75,6 @@ module.exports = {
       files: ['*.cjs'],
       rules: {
         'unicorn/no-empty-file': 'off',
-      },
-    },
-    {
-      files: ['**/actions/**/*.ts'],
-      rules: {
-        '@typescript-eslint/require-await': 'off',
       },
     },
     {
@@ -140,6 +124,7 @@ module.exports = {
         allowNumberAndString: true,
       },
     ],
+    'sonarjs/pseudo-random': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
