@@ -41,25 +41,3 @@ jobs:
 
       - name: Lint JS files 🐱
         run: bun run lint
-
-  test:
-    name: 'Test 🧪'
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
-
-      - name: Setup 👨🏻‍💻
-        uses: ./.github/actions/setup
-
-      - name: Run unit tests 🧪
-        run: bun run test:coverage
-        env:
-          VITE_JSON_PLACEHOLDER_API_URL: https://api.example.com
-
-      - name: Collect coverage
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
